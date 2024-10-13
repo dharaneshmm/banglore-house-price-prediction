@@ -1,0 +1,223 @@
+/* App.css */
+
+/************ Custom Font ************/
+@font-face {
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Bold.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Medium.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Book.ttf');
+  font-weight: 400;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: transparent; /* Make the background transparent */
+  transition: background-color 0.3s ease;
+  position: fixed; /* Fixed position to keep it on top */
+  width: 100%; /* Full width */
+  top: 0; /* Align to top */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black when scrolled */
+}
+
+.navbar-brand img {
+  width: 50px;
+}
+
+.navbar-nav .nav-link {
+  color: white; /* Change link color to white for better visibility on dark background */
+  font-size: medium;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8d210; /* Highlight color on hover */
+}
+
+.navbar h2 {
+  color: white;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%27http://www.w3.org/2000/svg%27 fill%3D%27%23ffffff%27 viewBox%3D%270 0 30 30%27%3E%3Cpath stroke%3D%27rgba%280%2C 0%2C 0%2C 0.5%29%27 stroke-linecap%3D%27round%27 stroke-miterlimit%3D%2710%27 stroke-width%3D%272%27 d%3D%27M4 7h22M4 15h22M4 23h22%27/%3E%3C/svg%3E');
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .navbar h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Banner Section */
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('./assets/img/house.jpg') no-repeat center center/cover;
+  text-align: center;
+  color: white;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.banner .txt-rotate .wrap {
+  border-right: 0.08em solid #fff;
+  padding-right: 5px;
+}
+
+.banner button {
+  background-color: #f8d210;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.banner button:hover {
+  background-color: #e8c210;
+}
+
+.banner img {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+/* Animation Visibility Adjustments */
+.animate__animated.animate__fadeIn {
+  animation-duration: 1.5s;
+}
+
+.animate__animated.animate__zoomIn {
+  animation-duration: 1.5s;
+}
+
+/* prediction page*/
+
+/* Style for the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the header to ensure it remains unaffected */
+.header {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Style for the prediction page */
+.prediction-page {
+    min-height: 100vh;
+    background-image: url('./assets/img/house.jpg'); /* Replace with your house-related background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 60px; /* Adjust this value based on your header height */
+}
+
+/* Content container inside the prediction page */
+.prediction-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for readability */
+    border-radius: 8px;
+}
+
+/* Styling for form groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Heading inside form groups */
+.form-group h2 {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333; /* Dark color for better readability */
+}
+
+/* Styling for form controls */
+.form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Button styling for prediction */
+.predict-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff; /* Blue color for the button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Button styling for clearing results */
+.clear-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #dc3545; /* Red color for the clear button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+/* Styling for prediction result */
+.prediction {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold; /* Bold for emphasis */
+    color: #333; /* Dark color for better readability */
+}
+
+
+
